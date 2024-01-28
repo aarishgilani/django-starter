@@ -1,0 +1,23 @@
+{% extends "app.html" %}
+
+{% load django_vite %}
+
+{% block content %}
+    {% vite_asset 'js/app.js' %}
+
+    <div class="flex flex-col justify-center items-center sm:max-w-4xl w-full mx-auto px-8 lg:px-0 space-y-10 h-screen">
+
+        <div class="max-w-7xl space-y-5 text-[#F1FFF7]">
+            <h1 class="text-4xl">
+                Django Starter Project
+            </h1>
+            <h2 class="text-xl">
+                A starter point for Django projects ready with Vite for bundling front-end assets and Tailwind as choice for CSS framework.
+            </h2>
+        </div>
+    
+        <div id="vue-app">
+            <demo-block></demo-block>
+        </div>
+    </div>
+{% endblock content %}
